@@ -16,7 +16,7 @@ const teamSchema = mongoose.Schema(
             required : false,
             trim: true
         },
-        phoneNo :
+        phone :
         {
             type : String,
             unique : true,

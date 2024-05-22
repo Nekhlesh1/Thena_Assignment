@@ -5,13 +5,13 @@ const app = express()
 
 require('dotenv').config()
 require('./db/db.js')
+app.use(express.json());
 
 const port = process.env.port || 5000
 
-app.use('/', (req,res)=>
-{
-    res.send('Working')
-})
+// Route Handling
+
+app.use('/api/team', require('./routes/team.route.js'))
 
 app.listen(port, ()=>
 {
