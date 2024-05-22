@@ -6,8 +6,8 @@ Frameworks and Libraries used : Node.js, Express.js, Mongoose, Nodemon, dotenv, 
     1. Clone the repository using  "git clone" command in your local machine
     2. use "npm i" to install all the dependencies
     3. create a new .env file and copy the variables :
-          code (PORT = 8000 
-          MONGO_URL = 'mongodb+srv://nekhlesh:J5NosgqqnfN8feRG@cluster0.pgjuzrr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+          PORT = 8000 
+          MONGO_URL = 'mongodb+srv://nekhlesh:J5NosgqqnfN8feRG@cluster0.pgjuzrr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
   The application is ready to use.
   We can test the API endpoints with the help of Postman as well as folllowing curl commands :
 1. GET method to get the list of all members of the team :
