@@ -2,7 +2,21 @@ const Team = require('../models/teams.model.js')
 
 module.exports.getAllTeams = async(req,res) =>
     {
-        res.send("Inside get all teams")
+       try 
+       {
+         const allMembers = await Team.find({})
+
+         if(allMembers)
+            {
+                return res.status(200).json(allMembers)
+                
+            }
+
+       } 
+       catch (error) 
+       {
+        return res.status(400).send(error)
+       }
     }
 
 module.exports.addTeam = async(req,res) =>
