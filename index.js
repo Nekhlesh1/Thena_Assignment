@@ -1,7 +1,10 @@
+//  express setup
 const express = require('express')
 const app = express()
 
+
 require('dotenv').config()
+require('./db/db.js')
 
 const port = process.env.port || 5000
 
