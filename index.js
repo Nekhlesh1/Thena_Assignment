@@ -5,6 +5,7 @@ const app = express()
 
 require('dotenv').config()
 require('./db/db.js')
+app.use(express.json());
 
 const port = process.env.port || 5000
 
