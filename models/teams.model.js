@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const validator = require("validator");
-const { default: isEmail } = require("validator/lib/isEmail");
+
 
 const teamSchema = mongoose.Schema(
     {
@@ -20,6 +20,12 @@ const teamSchema = mongoose.Schema(
         {
             type : String,
             unique : true,
+            validate: {
+                validator: function (num) {
+                  return validator.isMobilePhone(num, "any", { strictMode: true });
+                },
+                message: () => `Enter a valid phone number!`,
+              },
             required: [true,' Phone number is required'],
         },
         email :
